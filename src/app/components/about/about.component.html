@@ -1,0 +1,68 @@
+<section id="about" class="py-20 bg-gradient-to-b from-white to-primary-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        À Propos de <span class="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">Senteur de Mami</span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Story Section -->
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div class="space-y-6">
+        <h3 class="text-3xl font-bold text-gray-800">Notre Histoire</h3>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Senteur de Mami est née de la passion pour les parfums authentiques et naturels. 
+          Inspirée par les traditions africaines et le savoir-faire artisanal, notre marque 
+          crée des fragrances uniques qui racontent une histoire et éveillent les sens.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          Chaque parfum est une œuvre d'art, élaborée avec des ingrédients soigneusement 
+          sélectionnés et des méthodes de fabrication respectueuses de l'environnement. 
+          Nous croyons que la beauté et la qualité peuvent aller de pair avec la durabilité.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl p-1">
+          <div class="bg-white rounded-3xl p-8 h-full">
+            <div class="grid grid-cols-2 gap-6">
+              @for (stat of stats; track stat.label) {
+                <div class="text-center p-4 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl">
+                  <div class="text-4xl font-bold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent mb-2">
+                    {{ stat.number }}
+                  </div>
+                  <div class="text-sm font-medium text-gray-600">{{ stat.label }}</div>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      @for (feature of features; track feature.title) {
+        <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+          <div class="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+            {{ feature.icon }}
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">{{ feature.title }}</h3>
+          <p class="text-gray-600 leading-relaxed">{{ feature.description }}</p>
+        </div>
+      }
+    </div>
+
+    <!-- Mission Statement -->
+    <div class="mt-20 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-3xl p-12 text-center text-white">
+      <h3 class="text-3xl md:text-4xl font-bold mb-6">Notre Mission</h3>
+      <p class="text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto">
+        Offrir des parfums authentiques qui célèbrent la richesse culturelle africaine 
+        tout en respectant l'environnement et en garantissant une qualité exceptionnelle.
+      </p>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,228 @@
+<section id="products" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Notre <span class="bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">Catalogue</span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full mb-6"></div>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Découvrez notre collection de parfums authentiques et naturels
+      </p>
+    </div>
+
+    <!-- Search & Filters -->
+    <div class="mb-12 space-y-6">
+      <!-- Search Bar -->
+      <div class="max-w-2xl mx-auto">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Rechercher un parfum..."
+            (input)="onSearchChange($event)"
+            class="w-full px-6 py-4 pl-12 rounded-full border-2 border-gray-200 focus:border-primary-500 focus:outline-none transition-colors duration-300 text-lg">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap justify-center gap-4">
+        @for (category of categories(); track category.id) {
+          <button
+            (click)="selectCategory(category.id)"
+            class="px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+            [class.bg-gradient-to-r]="selectedCategory() === category.id"
+            [class.from-primary-500]="selectedCategory() === category.id"
+            [class.to-secondary-500]="selectedCategory() === category.id"
+            [class.text-white]="selectedCategory() === category.id"
+            [class.shadow-lg]="selectedCategory() === category.id"
+            [class.bg-gray-100]="selectedCategory() !== category.id"
+            [class.text-gray-700]="selectedCategory() !== category.id"
+            [class.hover:bg-gray-200]="selectedCategory() !== category.id">
+            {{ category.name }}
+          </button>
+        }
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (product of filteredProducts(); track product.id) {
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100">
+          <!-- Product Image -->
+          <div class="relative h-64 bg-gradient-to-br from-primary-100 to-secondary-100 overflow-hidden">
+            <div class="absolute inset-0 flex items-center justify-center text-8xl">
+              🌸
+            </div>
+            
+            <!-- Badges -->
+            <div class="absolute top-4 left-4 flex flex-col gap-2">
+              @if (product.isNew) {
+                <span class="px-3 py-1 bg-green-500 text-white text-sm font-semibold rounded-full">
+                  Nouveau
+                </span>
+              }
+              @if (product.isPromotion) {
+                <span class="px-3 py-1 bg-red-500 text-white text-sm font-semibold rounded-full">
+                  Promotion
+                </span>
+              }
+            </div>
+
+            <!-- Quick View Button -->
+            <button
+              (click)="openProductModal(product)"
+              class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white font-semibold">
+              <span class="px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full">
+                Voir les détails
+              </span>
+            </button>
+          </div>
+
+          <!-- Product Info -->
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-2">
+              <h3 class="text-xl font-bold text-gray-800 group-hover:text-primary-500 transition-colors">
+                {{ product.name }}
+              </h3>
+              @if (!product.inStock) {
+                <span class="text-xs text-red-500 font-semibold">Rupture</span>
+              }
+            </div>
+
+            <p class="text-gray-600 mb-4 line-clamp-2">{{ product.description }}</p>
+
+            <!-- Price -->
+            <div class="flex items-center gap-2 mb-4">
+              @if (hasPromotion(product)) {
+                <span class="text-2xl font-bold text-primary-500">
+                  {{ getDisplayPrice(product) | number }} FCFA
+                </span>
+                <span class="text-lg text-gray-400 line-through">
+                  {{ product.price | number }} FCFA
+                </span>
+              } @else {
+                <span class="text-2xl font-bold text-gray-800">
+                  {{ product.price | number }} FCFA
+                </span>
+              }
+            </div>
+
+            <!-- Action Button -->
+            <button
+              (click)="orderOnWhatsApp(product)"
+              [disabled]="!product.inStock"
+              class="w-full py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              [class.bg-green-500]="product.inStock"
+              [class.hover:bg-green-600]="product.inStock"
+              [class.text-white]="product.inStock"
+              [class.bg-gray-300]="!product.inStock"
+              [class.text-gray-500]="!product.inStock"
+              [class.cursor-not-allowed]="!product.inStock">
+              <span class="text-xl">📱</span>
+              {{ product.inStock ? 'Commander sur WhatsApp' : 'Indisponible' }}
+            </button>
+          </div>
+        </div>
+      }
+    </div>
+
+    <!-- Empty State -->
+    @if (filteredProducts().length === 0) {
+      <div class="text-center py-20">
+        <div class="text-8xl mb-4">🔍</div>
+        <h3 class="text-2xl font-bold text-gray-800 mb-2">Aucun produit trouvé</h3>
+        <p class="text-gray-600">Essayez avec d'autres mots-clés ou catégories</p>
+      </div>
+    }
+  </div>
+</section>
+
+<!-- Product Modal -->
+@if (selectedProduct()) {
+  <div class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in" (click)="closeProductModal()">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" (click)="$event.stopPropagation()">
+      <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+        <h3 class="text-2xl font-bold text-gray-800">{{ selectedProduct()!.name }}</h3>
+        <button (click)="closeProductModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-6">
+        <!-- Image -->
+        <div class="h-80 bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl flex items-center justify-center text-9xl">
+          🌸
+        </div>
+
+        <!-- Description -->
+        <div>
+          <h4 class="text-lg font-bold text-gray-800 mb-2">Description</h4>
+          <p class="text-gray-600">{{ selectedProduct()!.description }}</p>
+        </div>
+
+        <!-- Characteristics -->
+        @if (selectedProduct()!.characteristics) {
+          <div>
+            <h4 class="text-lg font-bold text-gray-800 mb-3">Caractéristiques</h4>
+            <div class="grid grid-cols-2 gap-4">
+              @if (selectedProduct()!.characteristics?.volume) {
+                <div class="bg-gray-50 rounded-xl p-4">
+                  <div class="text-sm text-gray-500 mb-1">Volume</div>
+                  <div class="font-semibold text-gray-800">{{ selectedProduct()!.characteristics!.volume }}</div>
+                </div>
+              }
+              @if (selectedProduct()!.characteristics?.fragrance) {
+                <div class="bg-gray-50 rounded-xl p-4">
+                  <div class="text-sm text-gray-500 mb-1">Type</div>
+                  <div class="font-semibold text-gray-800">{{ selectedProduct()!.characteristics!.fragrance }}</div>
+                </div>
+              }
+              @if (selectedProduct()!.characteristics?.duration) {
+                <div class="bg-gray-50 rounded-xl p-4">
+                  <div class="text-sm text-gray-500 mb-1">Durée</div>
+                  <div class="font-semibold text-gray-800">{{ selectedProduct()!.characteristics!.duration }}</div>
+                </div>
+              }
+            </div>
+          </div>
+        }
+
+        <!-- Price & Order -->
+        <div class="border-t border-gray-200 pt-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <div class="text-sm text-gray-500 mb-1">Prix</div>
+              @if (hasPromotion(selectedProduct()!)) {
+                <div class="flex items-center gap-2">
+                  <span class="text-3xl font-bold text-primary-500">
+                    {{ getDisplayPrice(selectedProduct()!) | number }} FCFA
+                  </span>
+                  <span class="text-xl text-gray-400 line-through">
+                    {{ selectedProduct()!.price | number }} FCFA
+                  </span>
+                </div>
+              } @else {
+                <div class="text-3xl font-bold text-gray-800">
+                  {{ selectedProduct()!.price | number }} FCFA
+                </div>
+              }
+            </div>
+          </div>
+
+          <button
+            (click)="orderOnWhatsApp(selectedProduct()!)"
+            class="w-full py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <span class="text-2xl">📱</span>
+            Commander sur WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+

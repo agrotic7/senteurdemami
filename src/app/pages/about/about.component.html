@@ -1,0 +1,180 @@
+<div class="min-h-screen">
+  <!-- Hero Section -->
+  <section class="relative h-[70vh] bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 mt-[73px] flex items-center overflow-hidden">
+    <!-- Decorative Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-gold-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+      <div class="absolute bottom-20 left-20 w-96 h-96 bg-burgundy-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center">
+      <div class="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full mb-8">
+        <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        <span class="text-sm font-medium uppercase tracking-[0.2em]">Notre Maison</span>
+      </div>
+      
+      <h1 class="text-6xl md:text-7xl lg:text-8xl font-display mb-6 leading-tight">
+        L'Essence de<br/>Senteur de Mami
+      </h1>
+      <p class="text-xl md:text-2xl text-white/90 font-light max-w-3xl mx-auto">
+        Une histoire de passion, d'authenticité et d'excellence
+      </p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <!-- Image -->
+        <div class="relative">
+          <div class="aspect-[4/5] bg-gradient-to-br from-cream-100 to-burgundy-50 rounded-sm overflow-hidden shadow-2xl">
+            <img src="/assets/logo.jpg" alt="Notre Histoire" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-gold-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="space-y-8">
+          <div>
+            <div class="text-gold-600 mb-4">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+              </svg>
+            </div>
+            <h2 class="text-5xl font-display text-burgundy-900 mb-6 leading-tight">
+              Notre Histoire
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-burgundy-700 to-gold-600 mb-6"></div>
+          </div>
+          
+          <div class="space-y-6 text-lg text-burgundy-700 font-light leading-relaxed">
+            <p>
+              Senteur de Mami est née de la passion pour les parfums authentiques et naturels. 
+              Inspirée par les traditions africaines et le savoir-faire artisanal, notre marque 
+              crée des fragrances uniques qui racontent une histoire et éveillent les sens.
+            </p>
+            <p>
+              Chaque parfum est une œuvre d'art, élaborée avec des ingrédients soigneusement 
+              sélectionnés et des méthodes de fabrication respectueuses de l'environnement. 
+              Nous croyons que la beauté et la qualité peuvent aller de pair avec la durabilité.
+            </p>
+            <p>
+              Depuis notre création, nous avons pour mission d'offrir des parfums qui célèbrent 
+              la richesse culturelle africaine tout en respectant notre environnement et en 
+              garantissant une qualité exceptionnelle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-24 bg-gradient-to-b from-white to-cream-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-1 bg-burgundy-200">
+        @for (stat of stats; track stat.label) {
+          <div class="bg-white p-12 text-center hover:bg-cream-50 transition-colors duration-300">
+            <div class="text-5xl font-display text-burgundy-900 mb-3">{{ stat.number }}</div>
+            <div class="text-sm text-burgundy-600 uppercase tracking-widest font-medium">{{ stat.label }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-6xl font-display text-burgundy-900 mb-6">
+          Nos Valeurs
+        </h2>
+        <div class="w-24 h-px bg-gradient-to-r from-transparent via-burgundy-700 to-transparent mx-auto mb-6"></div>
+        <p class="text-xl text-burgundy-600 max-w-2xl mx-auto font-light">
+          Ce qui nous guide dans chaque création
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        @for (feature of features; track feature.title) {
+          <div class="group relative bg-white hover:bg-cream-50 p-10 border border-burgundy-100 hover:border-burgundy-300 transition-all duration-500 hover:shadow-xl">
+            <!-- Icon -->
+            <div class="w-16 h-16 bg-gradient-to-br from-burgundy-100 to-gold-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+              <svg class="w-8 h-8 text-burgundy-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+              </svg>
+            </div>
+            
+            <h3 class="text-xl font-semibold text-burgundy-900 mb-4">
+              {{ feature.title }}
+            </h3>
+            <p class="text-burgundy-600 leading-relaxed font-light">
+              {{ feature.description }}
+            </p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-32 bg-gradient-to-b from-white to-cream-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-6xl font-display text-burgundy-900 mb-6">
+          Notre Équipe
+        </h2>
+        <div class="w-24 h-px bg-gradient-to-r from-transparent via-burgundy-700 to-transparent mx-auto mb-6"></div>
+        <p class="text-xl text-burgundy-600 max-w-2xl mx-auto font-light">
+          Des passionnés au service de votre bien-être
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        @for (member of team; track member.name) {
+          <div class="group text-center">
+            <div class="relative aspect-square bg-gradient-to-br from-cream-100 to-burgundy-50 mb-6 overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-48 h-48 bg-white rounded-full border-4 border-burgundy-100 flex items-center justify-center">
+                  <svg class="w-24 h-24 text-burgundy-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-display text-burgundy-900 mb-2">{{ member.name }}</h3>
+            <p class="text-gold-700 font-medium mb-3 uppercase tracking-wider text-sm">{{ member.role }}</p>
+            <p class="text-burgundy-600 font-light">{{ member.bio }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Statement -->
+  <section class="py-32 bg-burgundy-900 relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-gold-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+      <div class="inline-block mb-8">
+        <svg class="w-12 h-12 text-gold-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+        </svg>
+      </div>
+      
+      <h2 class="text-5xl md:text-6xl font-display mb-8 leading-tight">Notre Mission</h2>
+      <div class="w-24 h-px bg-gold-500 mx-auto mb-8"></div>
+      <p class="text-2xl md:text-3xl font-light leading-relaxed text-white/95">
+        Offrir des parfums authentiques qui célèbrent la richesse culturelle africaine 
+        tout en respectant l'environnement et en garantissant une qualité exceptionnelle.
+      </p>
+    </div>
+  </section>
+</div>
