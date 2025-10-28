@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { ProductService } from '../../services/product.service';
+import { SeoService } from '../../services/seo.service';
 import { AnimateOnScrollDirective } from '../../directives/animate-on-scroll.directive';
 
 @Component({
@@ -35,7 +36,7 @@ import { AnimateOnScrollDirective } from '../../directives/animate-on-scroll.dir
     }
   `]
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
   featuredProducts: any[] = [];
   
   features = [
@@ -61,8 +62,34 @@ export class HomeComponent {
     }
   ];
 
-  constructor(private productService: ProductService) {
+  constructor(
+    private productService: ProductService,
+    private seoService: SeoService
+  ) {
     this.featuredProducts = this.productService.getProducts().slice(0, 3);
+  }
+
+  ngOnInit() {
+    // SEO Meta Tags
+    this.seoService.updateMetaTags({
+      title: 'Senteur de Mami - Parfums Traditionnels Africains | Gowé, Diguijé, Thiouraye',
+      description: 'Découvrez les parfums traditionnels africains authentiques : Gowé, Diguijé et Thiouraye. 100% naturels, recettes ancestrales. Livraison en France et Europe.',
+      keywords: 'parfum africain, senteur traditionnelle, gowé, diguijé, thiouraye, parfum naturel, encens africain, parfum maison, senteur de mami, parfum artisanal, tradition africaine',
+      image: '/assets/banniere.jpg',
+      url: 'https://senteurdemami.com'
+    });
+
+    // Structured Data - Organization
+    this.seoService.addOrganizationSchema();
+
+    // Structured Data - Breadcrumb
+    this.seoService.addBreadcrumbSchema([
+      { name: 'Accueil', url: '/' }
+    ]);
+  }
+
+  ngOnDestroy() {
+    this.seoService.removeStructuredData();
   }
 
   orderOnWhatsApp(product: any) {

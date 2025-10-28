@@ -1,0 +1,35 @@
+# Senteur de Mami - Robots.txt
+# https://senteurdemami.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://senteurdemami.com/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+

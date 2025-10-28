@@ -142,13 +142,13 @@ export class ProductService {
   }
 
   getWhatsAppLink(product: Product): string {
-    const phoneNumber = '221774451982'; // Numéro du devis
+    const phoneNumber = '33753547958'; // Numéro WhatsApp France
     const message = `Bonjour, je suis intéressé(e) par le parfum *${product.name}* au prix de ${product.promotionPrice || product.price} FCFA. Pouvez-vous me donner plus d'informations ?`;
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   }
 
   getGeneralWhatsAppLink(): string {
-    const phoneNumber = '221774451982';
+    const phoneNumber = '33753547958';
     const message = 'Bonjour, je souhaiterais avoir des informations sur vos parfums Senteur de Mami.';
     return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   }

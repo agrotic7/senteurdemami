@@ -1,0 +1,135 @@
+<div class="min-h-screen bg-gradient-to-br from-cream-50 via-white to-cream-100">
+  <!-- Hero Section -->
+  <section class="relative py-16 md:py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800">
+    <div class="absolute inset-0 bg-[url('/assets/arriereplan.jpg')] opacity-5 bg-cover bg-center"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full mb-6">
+        <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        </svg>
+        <span class="text-sm font-medium uppercase tracking-[0.2em] text-white">Blog & Conseils</span>
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4">
+        Traditions & Savoirs
+      </h1>
+      <p class="text-xl text-white/90 max-w-2xl mx-auto">
+        Découvrez l'univers des parfums traditionnels africains
+      </p>
+      <div class="w-24 h-1 bg-gold-500 mx-auto mt-6"></div>
+    </div>
+  </section>
+
+  <!-- Featured Articles -->
+  @if (featuredArticles().length > 0) {
+    <section class="py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center gap-3 mb-8">
+          <svg class="w-6 h-6 text-gold-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <h2 class="text-3xl font-display font-semibold text-burgundy-900">Articles à la Une</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          @for (article of featuredArticles(); track article.id) {
+            <article class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+              <a [routerLink]="['/blog', article.slug]" class="block">
+                <div class="relative aspect-[16/9] overflow-hidden">
+                  <img [src]="article.image" [alt]="article.title + ' - Article blog Senteur de Mami'" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-burgundy-900/80 to-transparent"></div>
+                  <span class="absolute top-4 left-4 px-4 py-2 bg-gold-600 text-white text-xs font-semibold uppercase tracking-wider">
+                    {{ article.category }}
+                  </span>
+                </div>
+                <div class="p-6">
+                  <div class="flex items-center gap-4 text-sm text-burgundy-600 mb-3">
+                    <span class="flex items-center gap-1">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                      </svg>
+                      {{ article.publishedDate }}
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                      </svg>
+                      {{ article.readingTime }} min
+                    </span>
+                  </div>
+                  <h3 class="text-xl font-display font-semibold text-burgundy-900 mb-3 group-hover:text-gold-700 transition-colors">
+                    {{ article.title }}
+                  </h3>
+                  <p class="text-burgundy-700 mb-4 line-clamp-3">
+                    {{ article.excerpt }}
+                  </p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-burgundy-600">Par {{ article.author }}</span>
+                    <span class="text-burgundy-900 font-medium group-hover:text-gold-700 transition-colors">
+                      Lire l'article →
+                    </span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          }
+        </div>
+      </div>
+    </section>
+  }
+
+  <!-- All Articles -->
+  <section class="py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-display font-semibold text-burgundy-900 mb-8">Tous les Articles</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        @for (article of articles(); track article.id) {
+          <article class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col">
+            <a [routerLink]="['/blog', article.slug]" class="flex flex-1 flex-col">
+              <div class="relative aspect-[4/3] overflow-hidden">
+                <img [src]="article.image" [alt]="article.title" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-t from-burgundy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <span class="inline-block px-3 py-1 bg-burgundy-100 text-burgundy-800 text-xs font-semibold uppercase tracking-wider mb-3 w-fit">
+                  {{ article.category }}
+                </span>
+                <h3 class="text-lg font-display font-semibold text-burgundy-900 mb-3 group-hover:text-gold-700 transition-colors line-clamp-2">
+                  {{ article.title }}
+                </h3>
+                <p class="text-burgundy-700 mb-4 line-clamp-3 flex-1">
+                  {{ article.excerpt }}
+                </p>
+                <div class="flex items-center justify-between text-sm text-burgundy-600 pt-4 border-t border-burgundy-100">
+                  <span>{{ article.readingTime }} min</span>
+                  <span class="text-burgundy-900 font-medium group-hover:text-gold-700">Lire →</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">
+        Envie de Découvrir Nos Parfums ?
+      </h2>
+      <p class="text-xl text-white/90 mb-8">
+        Explorez notre collection de senteurs traditionnelles authentiques
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/products" class="px-8 py-4 bg-white text-burgundy-900 font-medium uppercase tracking-wider hover:bg-cream-50 transition-colors duration-300">
+          Voir les Produits
+        </a>
+        <a href="/contact" class="px-8 py-4 border-2 border-white text-white font-medium uppercase tracking-wider hover:bg-white/10 transition-colors duration-300">
+          Nous Contacter
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+

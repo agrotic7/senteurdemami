@@ -65,25 +65,25 @@ export class ContactComponent {
     {
       icon: '📱',
       title: 'Téléphone',
-      value: '+221 77 445 19 82',
-      link: 'tel:+221774451982'
+      value: '+33 7 53 54 79 58',
+      link: 'tel:+33753547958'
     },
     {
       icon: '💬',
       title: 'WhatsApp',
-      value: '+221 76 823 08 03',
-      link: 'https://wa.me/221768230803'
+      value: '+33 7 53 54 79 58',
+      link: 'https://wa.me/33753547958'
     },
     {
       icon: '📧',
       title: 'Email',
-      value: 'contact@senteurdemami.sn',
-      link: 'mailto:contact@senteurdemami.sn'
+      value: 'senteursdemami@gmail.com',
+      link: 'mailto:senteursdemami@gmail.com'
     },
     {
       icon: '📍',
       title: 'Adresse',
-      value: 'Dakar, Sénégal',
+      value: 'Montereau-Fault-Yonne, France',
       link: '#'
     }
   ];

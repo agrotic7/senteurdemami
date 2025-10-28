@@ -81,3 +81,30 @@ section {
   overflow: hidden;
 }
 
+/* Page Transition Animations */
+main {
+  position: relative;
+  display: block;
+}
+
+/* Smooth scroll to top on page change */
+router-outlet {
+  display: none;
+}
+
+/* Prevent flash during transitions */
+main > * {
+  will-change: opacity, transform;
+  animation: pageEnter 0.4s ease-out;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

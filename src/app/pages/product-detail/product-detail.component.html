@@ -16,7 +16,7 @@
           <!-- Product Image -->
           <div class="space-y-6">
             <div class="relative aspect-[4/5] bg-gradient-to-br from-cream-100 to-burgundy-50 overflow-hidden shadow-2xl">
-              <img [src]="prod.image" alt="{{ prod.name }}" class="w-full h-full object-cover">
+              <img [src]="prod.image" [alt]="prod.name + ' - ' + prod.description + ' - ' + prod.characteristics?.volume + ' | Senteur de Mami'" class="w-full h-full object-cover" loading="eager">
               
               <!-- Badges -->
               <div class="absolute top-6 left-6 flex flex-col gap-2">
@@ -179,7 +179,7 @@
               <div class="group">
                 <a [routerLink]="['/products', product.id]" class="block">
                   <div class="relative aspect-[3/4] bg-gradient-to-br from-cream-100 to-burgundy-50 overflow-hidden mb-6 shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-                    <img [src]="product.image" alt="{{ product.name }}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                    <img [src]="product.image" [alt]="product.name + ' - Parfum similaire recommandé'" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" loading="lazy">
                     
                     <div class="absolute inset-0 bg-gradient-to-t from-burgundy-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     

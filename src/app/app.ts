@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, ChildrenOutletContexts } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
+import { fadeAnimation } from './animations/route-animations';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,13 @@ import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-b
     WhatsappButtonComponent
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  animations: [fadeAnimation]
 })
 export class App {
+  constructor(private contexts: ChildrenOutletContexts) {}
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  }
 }

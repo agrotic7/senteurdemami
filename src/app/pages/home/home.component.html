@@ -2,24 +2,24 @@
 <app-hero></app-hero>
 
 <!-- Brand Story Section -->
-<section class="py-32 bg-white relative overflow-hidden">
+<section class="py-12 md:py-20 lg:py-32 bg-white relative overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cream-50/30 to-transparent"></div>
   
   <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center space-y-8">
+    <div class="text-center space-y-4 md:space-y-6 lg:space-y-8">
       <div class="inline-block" appAnimateOnScroll>
         <div class="text-gold-600 mb-4">
           <svg class="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
         </div>
-        <h2 class="text-5xl md:text-6xl font-display text-burgundy-900 mb-6 leading-tight">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-display text-burgundy-900 mb-3 md:mb-6 leading-tight">
           Traditions Ancestrales
         </h2>
         <div class="w-24 h-px bg-gradient-to-r from-transparent via-burgundy-700 to-transparent mx-auto"></div>
       </div>
       
-      <p class="text-xl md:text-2xl text-burgundy-700 leading-relaxed font-light max-w-3xl mx-auto" appAnimateOnScroll>
+      <p class="text-base md:text-xl lg:text-2xl text-burgundy-700 leading-relaxed font-light max-w-3xl mx-auto" appAnimateOnScroll>
         Les senteurs traditionnelles transmises de génération en génération. Gowé, Diguijé et Thiouraye pour parfumer votre maison, vos vêtements et accompagner vos rituels.
       </p>
       
@@ -34,7 +34,7 @@
 </section>
 
 <!-- Values Grid -->
-<section class="py-24 bg-gradient-to-b from-cream-50 to-white">
+<section class="py-10 md:py-16 lg:py-24 bg-gradient-to-b from-cream-50 to-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
       @for (feature of features; track feature.title; let i = $index) {
@@ -80,7 +80,7 @@
 </section>
 
 <!-- Featured Products -->
-<section class="py-32 bg-white">
+<section class="py-12 md:py-20 lg:py-32 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-10 md:mb-16 lg:mb-20" appAnimateOnScroll>
@@ -106,7 +106,7 @@
           <a [routerLink]="['/products', product.id]" class="block">
             <!-- Image Container -->
             <div class="relative aspect-[3/4] bg-gradient-to-br from-cream-100 to-burgundy-50 overflow-hidden mb-3 md:mb-4 lg:mb-6 shadow-lg group-hover:shadow-2xl transition-shadow duration-500">
-              <img [src]="product.image" alt="{{ product.name }}" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+              <img [src]="product.image" [alt]="product.name + ' - Parfum Traditionnel Africain Naturel | Senteur de Mami'" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" loading="lazy">
               
               <!-- Overlay -->
               <div class="absolute inset-0 bg-gradient-to-t from-burgundy-900/60 via-burgundy-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -155,7 +155,7 @@
     </div>
 
     <!-- View All -->
-    <div class="text-center mt-16">
+    <div class="text-center mt-8 md:mt-12 lg:mt-16">
       <a routerLink="/products" 
          class="inline-flex items-center gap-3 px-10 py-5 border-2 border-burgundy-900 text-burgundy-900 font-medium uppercase tracking-wider hover:bg-burgundy-900 hover:text-white transition-all duration-300 group">
         Découvrir Toute la Collection
@@ -168,10 +168,10 @@
 </section>
 
 <!-- CTA Section -->
-<section class="relative py-32 overflow-hidden">
+<section class="relative py-12 md:py-20 lg:py-32 overflow-hidden">
   <!-- Parallax Background Image -->
   <div class="absolute inset-0 transform scale-105">
-    <img src="/assets/arriereplan.jpg" alt="Background" class="w-full h-full object-cover opacity-35">
+      <img src="/assets/arriereplan.jpg" alt="Décoration traditionnelle africaine - Senteur de Mami" class="w-full h-full object-cover opacity-35" loading="lazy">
     <div class="absolute inset-0 bg-gradient-to-br from-burgundy-950/95 via-burgundy-900/90 to-burgundy-800/85"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
   </div>
@@ -200,16 +200,16 @@
   <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
 
   <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white z-10" appAnimateOnScroll>
-    <div class="inline-block mb-8">
-      <svg class="w-12 h-12 text-gold-400 mx-auto mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+    <div class="inline-block mb-4 md:mb-6 lg:mb-8">
+      <svg class="w-10 h-10 md:w-12 md:h-12 text-gold-400 mx-auto mb-3 md:mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
       </svg>
     </div>
     
-    <h2 class="text-5xl md:text-6xl font-display mb-6 leading-tight">
+    <h2 class="text-3xl md:text-5xl lg:text-6xl font-display mb-4 md:mb-6 leading-tight">
       Découvrez Nos Senteurs Traditionnelles
     </h2>
-    <p class="text-xl md:text-2xl mb-12 text-white/90 font-light max-w-2xl mx-auto">
+    <p class="text-base md:text-xl lg:text-2xl mb-6 md:mb-10 lg:mb-12 text-white/90 font-light max-w-2xl mx-auto">
       Laissez-vous transporter par les arômes authentiques : Gowé, Diguijé et Thiouraye
     </p>
     

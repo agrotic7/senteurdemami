@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://senteurdemami.com/</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://senteurdemami.com/about</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Products Main Page -->
+  <url>
+    <loc>https://senteurdemami.com/products</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Product 1: Essence d'Afrique -->
+  <url>
+    <loc>https://senteurdemami.com/products/1</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://senteurdemami.com/assets/produits/Essence%20d%27Afrique.jpg</image:loc>
+      <image:title>Essence d'Afrique - Parfum Traditionnel</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product 2: Savane Mystique -->
+  <url>
+    <loc>https://senteurdemami.com/products/2</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://senteurdemami.com/assets/produits/Savane%20Mystique.jpg</image:loc>
+      <image:title>Savane Mystique - Parfum Homme</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product 3: Fleur de Karité -->
+  <url>
+    <loc>https://senteurdemami.com/products/3</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://senteurdemami.com/assets/produits/Fleur%20de%20Karit%C3%A9.jpg</image:loc>
+      <image:title>Fleur de Karité - Parfum Femme</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product 4: Oud Royal -->
+  <url>
+    <loc>https://senteurdemami.com/products/4</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://senteurdemami.com/assets/produits/Oud%20Royal.jpg</image:loc>
+      <image:title>Oud Royal - Parfum Luxueux</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product 5: Baobab Frais -->
+  <url>
+    <loc>https://senteurdemami.com/products/5</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://senteurdemami.com/assets/produits/Baobab%20Frais.jpg</image:loc>
+      <image:title>Baobab Frais - Parfum Fraîcheur</image:title>
+    </image:image>
+  </url>
+
+  <!-- Product 6: Ambre Solaire -->
+  <url>
+    <loc>https://senteurdemami.com/products/6</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://senteurdemami.com/assets/produits/Ambre%20Solaire.jpg</image:loc>
+      <image:title>Ambre Solaire - Parfum Ambré</image:title>
+    </image:image>
+  </url>
+
+  <!-- Testimonials Page -->
+  <url>
+    <loc>https://senteurdemami.com/testimonials</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://senteurdemami.com/contact</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FAQ Page -->
+  <url>
+    <loc>https://senteurdemami.com/faq</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Main Page -->
+  <url>
+    <loc>https://senteurdemami.com/blog</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://senteurdemami.com/blog/gowe-histoire-traditions-parfum-ancestral-africain</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://senteurdemami.com/blog/diguije-thiouraye-guide-parfums-vetements</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://senteurdemami.com/blog/5-raisons-choisir-parfums-naturels</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://senteurdemami.com/legal-notice</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://senteurdemami.com/privacy-policy</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://senteurdemami.com/terms-conditions</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://senteurdemami.com/return-policy</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
+

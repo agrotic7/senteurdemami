@@ -15,15 +15,16 @@ export class FooterComponent {
     { label: 'Accueil', link: '/' },
     { label: 'À Propos', link: '/about' },
     { label: 'Produits', link: '/products' },
-    { label: 'Témoignages', link: '/testimonials' },
+    { label: 'Blog', link: '/blog' },
+    { label: 'FAQ', link: '/faq' },
     { label: 'Contact', link: '/contact' }
   ];
 
   legalLinks = [
-    { label: 'Mentions Légales', link: '#mentions-legales' },
-    { label: 'Politique de Confidentialité', link: '#confidentialite' },
-    { label: 'Conditions Générales', link: '#cgv' },
-    { label: 'Politique de Retour', link: '#retour' }
+    { label: 'Mentions Légales', link: '/legal-notice' },
+    { label: 'Politique de Confidentialité', link: '/privacy-policy' },
+    { label: 'Conditions Générales', link: '/terms-conditions' },
+    { label: 'Politique de Retour', link: '/return-policy' }
   ];
 }
 
