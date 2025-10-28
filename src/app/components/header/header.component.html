@@ -11,7 +11,7 @@
           <span class="text-2xl md:text-3xl font-display text-burgundy-900 tracking-tight">
             Senteur de Mami
           </span>
-          <span class="text-xs text-burgundy-500 tracking-[0.25em] uppercase font-medium">Parfumerie</span>
+          <span class="text-xs text-burgundy-500 tracking-[0.25em] uppercase font-medium">Senteurs Traditionnelles</span>
         </div>
       </a>
 
@@ -19,7 +19,7 @@
       <ul class="hidden lg:flex items-center gap-1 bg-cream-50/50 backdrop-blur-sm px-2 py-2 rounded-full border border-burgundy-100/50">
         <li>
           <a routerLink="/" 
-             routerLinkActive="bg-burgundy-900 text-white shadow-lg"
+             routerLinkActive="bg-burgundy-900 !text-white shadow-lg"
              [routerLinkActiveOptions]="{exact: true}"
              class="px-6 py-2.5 rounded-full text-burgundy-700 hover:text-burgundy-900 font-medium transition-all duration-300 relative group">
             <span class="relative z-10 text-sm uppercase tracking-wider">Accueil</span>
@@ -27,28 +27,28 @@
         </li>
         <li>
           <a routerLink="/about" 
-             routerLinkActive="bg-burgundy-900 text-white shadow-lg"
+             routerLinkActive="bg-burgundy-900 !text-white shadow-lg"
              class="px-6 py-2.5 rounded-full text-burgundy-700 hover:text-burgundy-900 font-medium transition-all duration-300 relative group">
             <span class="relative z-10 text-sm uppercase tracking-wider">Maison</span>
           </a>
         </li>
         <li>
           <a routerLink="/products" 
-             routerLinkActive="bg-burgundy-900 text-white shadow-lg"
+             routerLinkActive="bg-burgundy-900 !text-white shadow-lg"
              class="px-6 py-2.5 rounded-full text-burgundy-700 hover:text-burgundy-900 font-medium transition-all duration-300 relative group">
             <span class="relative z-10 text-sm uppercase tracking-wider">Collection</span>
           </a>
         </li>
         <li>
           <a routerLink="/testimonials" 
-             routerLinkActive="bg-burgundy-900 text-white shadow-lg"
+             routerLinkActive="bg-burgundy-900 !text-white shadow-lg"
              class="px-6 py-2.5 rounded-full text-burgundy-700 hover:text-burgundy-900 font-medium transition-all duration-300 relative group">
             <span class="relative z-10 text-sm uppercase tracking-wider">Avis</span>
           </a>
         </li>
         <li>
           <a routerLink="/contact" 
-             routerLinkActive="bg-burgundy-900 text-white shadow-lg"
+             routerLinkActive="bg-burgundy-900 !text-white shadow-lg"
              class="px-6 py-2.5 rounded-full text-burgundy-700 hover:text-burgundy-900 font-medium transition-all duration-300 relative group">
             <span class="relative z-10 text-sm uppercase tracking-wider">Contact</span>
           </a>
@@ -83,28 +83,28 @@
     [class.max-h-96]="isMenuOpen()">
     <div class="px-4 pb-6 space-y-2">
       <a routerLink="/" (click)="closeMenu()"
-         routerLinkActive="bg-burgundy-900 text-white"
+         routerLinkActive="bg-burgundy-900 !text-white"
          [routerLinkActiveOptions]="{exact: true}"
          class="block px-5 py-3 rounded-lg text-burgundy-700 hover:bg-burgundy-50 font-medium transition-all duration-300 uppercase tracking-wider text-sm">
         Accueil
       </a>
       <a routerLink="/about" (click)="closeMenu()"
-         routerLinkActive="bg-burgundy-900 text-white"
+         routerLinkActive="bg-burgundy-900 !text-white"
          class="block px-5 py-3 rounded-lg text-burgundy-700 hover:bg-burgundy-50 font-medium transition-all duration-300 uppercase tracking-wider text-sm">
         Maison
       </a>
       <a routerLink="/products" (click)="closeMenu()"
-         routerLinkActive="bg-burgundy-900 text-white"
+         routerLinkActive="bg-burgundy-900 !text-white"
          class="block px-5 py-3 rounded-lg text-burgundy-700 hover:bg-burgundy-50 font-medium transition-all duration-300 uppercase tracking-wider text-sm">
         Collection
       </a>
       <a routerLink="/testimonials" (click)="closeMenu()"
-         routerLinkActive="bg-burgundy-900 text-white"
+         routerLinkActive="bg-burgundy-900 !text-white"
          class="block px-5 py-3 rounded-lg text-burgundy-700 hover:bg-burgundy-50 font-medium transition-all duration-300 uppercase tracking-wider text-sm">
         Avis
       </a>
       <a routerLink="/contact" (click)="closeMenu()"
-         routerLinkActive="bg-burgundy-900 text-white"
+         routerLinkActive="bg-burgundy-900 !text-white"
          class="block px-5 py-3 rounded-lg text-burgundy-700 hover:bg-burgundy-50 font-medium transition-all duration-300 uppercase tracking-wider text-sm">
         Contact
       </a>

@@ -1,13 +1,44 @@
 <div class="min-h-screen">
   <!-- Hero Section -->
-  <section class="relative h-[70vh] bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 mt-[73px] flex items-center overflow-hidden">
-    <!-- Decorative Elements -->
-    <div class="absolute inset-0">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-gold-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
-      <div class="absolute bottom-20 left-20 w-96 h-96 bg-burgundy-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+  <section class="relative h-[70vh] mt-[73px] flex items-center overflow-hidden">
+    <!-- Parallax Background Image -->
+    <div class="absolute inset-0 transform scale-110">
+      <img src="/assets/arriereplan.jpg" alt="Background" class="w-full h-full object-cover opacity-40">
+      <div class="absolute inset-0 bg-gradient-to-br from-burgundy-950/95 via-burgundy-900/90 to-burgundy-800/85"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/30"></div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center">
+    <!-- Animated Mesh Gradient Overlay -->
+    <div class="absolute inset-0 opacity-60">
+      <div class="absolute inset-0 bg-gradient-to-br from-gold-600/20 via-transparent to-burgundy-600/20 animate-gradient"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="absolute inset-0">
+      <div class="absolute top-[10%] left-[15%] w-2 h-2 bg-gold-400 rounded-full opacity-60 animate-float"></div>
+      <div class="absolute top-[30%] right-[20%] w-1 h-1 bg-gold-300 rounded-full opacity-40 animate-float" style="animation-delay: 0.5s;"></div>
+      <div class="absolute bottom-[20%] left-[25%] w-1.5 h-1.5 bg-gold-500 rounded-full opacity-50 animate-float" style="animation-delay: 1s;"></div>
+      <div class="absolute top-[60%] right-[30%] w-1 h-1 bg-gold-400 rounded-full opacity-30 animate-float" style="animation-delay: 1.5s;"></div>
+      <div class="absolute bottom-[40%] left-[70%] w-2 h-2 bg-gold-300 rounded-full opacity-40 animate-float" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Dynamic Light Beams -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-gold-500/30 to-transparent animate-shimmer"></div>
+      <div class="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-gold-400/20 to-transparent animate-shimmer" style="animation-delay: 1s;"></div>
+    </div>
+
+    <!-- Decorative Blur Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 right-20 w-[500px] h-[500px] bg-gold-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse"></div>
+      <div class="absolute bottom-20 left-20 w-[400px] h-[400px] bg-burgundy-500 rounded-full mix-blend-screen filter blur-[100px] opacity-25 animate-pulse" style="animation-delay: 1.5s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500 rounded-full mix-blend-overlay filter blur-[150px] opacity-15 animate-pulse-slow"></div>
+    </div>
+
+    <!-- Shimmer Effect -->
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center z-10">
       <div class="inline-flex items-center space-x-3 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full mb-8">
         <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -30,10 +61,29 @@
       <div class="grid lg:grid-cols-2 gap-20 items-center">
         <!-- Image -->
         <div class="relative">
-          <div class="aspect-[4/5] bg-gradient-to-br from-cream-100 to-burgundy-50 rounded-sm overflow-hidden shadow-2xl">
-            <img src="/assets/logo.jpg" alt="Notre Histoire" class="w-full h-full object-cover">
+          <!-- Cadre décoratif -->
+          <div class="absolute -inset-4 bg-gradient-to-br from-gold-400/20 to-burgundy-400/20 rounded-lg blur-2xl"></div>
+          
+          <!-- Container principal -->
+          <div class="relative bg-white p-4 rounded-lg shadow-2xl">
+            <!-- Image avec ratio optimal -->
+            <div class="relative overflow-hidden rounded-sm">
+              <img src="/assets/arriereplan.jpg" alt="Notre Histoire" class="w-full h-auto object-contain">
+              
+              <!-- Bordure dorée subtile -->
+              <div class="absolute inset-0 border-2 border-gold-400/30 rounded-sm pointer-events-none"></div>
+            </div>
+            
+            <!-- Coins décoratifs -->
+            <div class="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-gold-600"></div>
+            <div class="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-gold-600"></div>
+            <div class="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-gold-600"></div>
+            <div class="absolute bottom-2 right-2 w-8 h-8 border-b-2 border-r-2 border-gold-600"></div>
           </div>
-          <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-gold-100 rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+          
+          <!-- Effets de profondeur -->
+          <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-gold-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow"></div>
+          <div class="absolute -top-6 -left-6 w-40 h-40 bg-burgundy-200 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-pulse-slow" style="animation-delay: 1s;"></div>
         </div>
 
         <!-- Content -->
@@ -52,19 +102,19 @@
           
           <div class="space-y-6 text-lg text-burgundy-700 font-light leading-relaxed">
             <p>
-              Senteur de Mami est née de la passion pour les parfums authentiques et naturels. 
-              Inspirée par les traditions africaines et le savoir-faire artisanal, notre marque 
-              crée des fragrances uniques qui racontent une histoire et éveillent les sens.
+              Senteur de Mami est née de la passion pour les senteurs traditionnelles authentiques. 
+              Inspirée par les recettes ancestrales transmises de génération en génération, notre marque 
+              propose le Gowé, Diguijé et Thiouraye qui racontent une histoire et éveillent les sens.
             </p>
             <p>
-              Chaque parfum est une œuvre d'art, élaborée avec des ingrédients soigneusement 
-              sélectionnés et des méthodes de fabrication respectueuses de l'environnement. 
-              Nous croyons que la beauté et la qualité peuvent aller de pair avec la durabilité.
+              Chaque préparation respecte les méthodes traditionnelles, élaborée avec des ingrédients 
+              naturels soigneusement sélectionnés : bois, écorces, épices, huiles et résines. 
+              Nous croyons en la préservation des savoir-faire ancestraux et la qualité des produits naturels.
             </p>
             <p>
-              Depuis notre création, nous avons pour mission d'offrir des parfums qui célèbrent 
-              la richesse culturelle africaine tout en respectant notre environnement et en 
-              garantissant une qualité exceptionnelle.
+              Depuis notre création, nous avons pour mission d'offrir des senteurs authentiques pour 
+              parfumer votre maison, vos vêtements et accompagner vos moments spirituels et rituels, 
+              tout en garantissant une qualité exceptionnelle.
             </p>
           </div>
         </div>
@@ -157,12 +207,38 @@
   </section>
 
   <!-- Mission Statement -->
-  <section class="py-32 bg-burgundy-900 relative overflow-hidden">
-    <div class="absolute inset-0">
-      <div class="absolute top-0 right-1/4 w-96 h-96 bg-gold-600 rounded-full mix-blend-overlay filter blur-3xl opacity-20"></div>
+  <section class="py-32 relative overflow-hidden">
+    <!-- Parallax Background Image -->
+    <div class="absolute inset-0 transform scale-105">
+      <img src="/assets/arriereplan.jpg" alt="Background" class="w-full h-full object-cover opacity-35">
+      <div class="absolute inset-0 bg-gradient-to-br from-burgundy-950/95 via-burgundy-900/90 to-burgundy-800/85"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
     </div>
 
-    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+    <!-- Animated Mesh Gradient -->
+    <div class="absolute inset-0 opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-br from-gold-600/25 via-transparent to-burgundy-600/25 animate-gradient"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="absolute inset-0">
+      <div class="absolute top-[15%] left-[20%] w-1.5 h-1.5 bg-gold-400 rounded-full opacity-50 animate-float"></div>
+      <div class="absolute top-[40%] right-[15%] w-1 h-1 bg-gold-300 rounded-full opacity-40 animate-float" style="animation-delay: 0.7s;"></div>
+      <div class="absolute bottom-[30%] left-[30%] w-2 h-2 bg-gold-500 rounded-full opacity-60 animate-float" style="animation-delay: 1.2s;"></div>
+      <div class="absolute top-[70%] right-[40%] w-1 h-1 bg-gold-400 rounded-full opacity-35 animate-float" style="animation-delay: 1.8s;"></div>
+    </div>
+
+    <!-- Decorative Blur Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-1/4 w-[450px] h-[450px] bg-gold-600 rounded-full mix-blend-screen filter blur-[120px] opacity-20 animate-pulse"></div>
+      <div class="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-burgundy-500 rounded-full mix-blend-screen filter blur-[110px] opacity-25 animate-pulse" style="animation-delay: 1.5s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gold-500 rounded-full mix-blend-overlay filter blur-[150px] opacity-15 animate-pulse-slow"></div>
+    </div>
+
+    <!-- Shimmer Effect -->
+    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white z-10">
       <div class="inline-block mb-8">
         <svg class="w-12 h-12 text-gold-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
@@ -172,8 +248,8 @@
       <h2 class="text-5xl md:text-6xl font-display mb-8 leading-tight">Notre Mission</h2>
       <div class="w-24 h-px bg-gold-500 mx-auto mb-8"></div>
       <p class="text-2xl md:text-3xl font-light leading-relaxed text-white/95">
-        Offrir des parfums authentiques qui célèbrent la richesse culturelle africaine 
-        tout en respectant l'environnement et en garantissant une qualité exceptionnelle.
+        Offrir des senteurs traditionnelles authentiques qui célèbrent notre héritage culturel 
+        tout en préservant les recettes ancestrales et en garantissant une qualité exceptionnelle.
       </p>
     </div>
   </section>

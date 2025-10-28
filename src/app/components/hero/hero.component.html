@@ -1,130 +1,89 @@
-<section id="hero" class="relative min-h-screen flex items-center bg-gradient-to-br from-cream-50 via-white to-cream-100">
+<section id="hero" class="relative min-h-[600px] md:min-h-[700px] lg:min-h-screen flex items-center bg-gradient-to-br from-cream-50 via-white to-cream-100 overflow-hidden">
   <!-- Decorative Background Elements -->
   <div class="absolute inset-0 overflow-hidden pointer-events-none">
     <div class="absolute top-20 right-20 w-96 h-96 bg-burgundy-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
     <div class="absolute bottom-20 left-20 w-96 h-96 bg-gold-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float" style="animation-delay: 2s;"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24">
-    @for (slide of slides; track $index) {
-      @if (currentSlide() === $index) {
-        <div class="grid lg:grid-cols-12 gap-16 items-center">
-          <!-- Left Content: 7 cols -->
-          <div class="lg:col-span-7 space-y-10">
-            <!-- Badge -->
-            <div class="inline-flex items-center space-x-3 bg-white/60 backdrop-blur-sm px-5 py-2 rounded-full border border-burgundy-100 shadow-sm">
-              <span class="w-2 h-2 bg-burgundy-700 rounded-full animate-pulse"></span>
-              <span class="text-xs font-medium text-burgundy-800 uppercase tracking-[0.2em]">Collection 2025</span>
-            </div>
-
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 md:py-16 lg:py-20">
+        <div class="grid grid-cols-2 gap-4 md:gap-8 lg:gap-12 items-center">
+          <!-- Left Content -->
+          <div class="space-y-4 md:space-y-6 lg:space-y-10">
             <!-- Main Title -->
-            <div class="space-y-6">
-              <h1 class="text-6xl md:text-7xl lg:text-8xl font-display leading-[0.95] text-burgundy-900">
-                {{ slide.title }}
+            <div class="space-y-2 md:space-y-4 lg:space-y-6 animate-fade-in-left">
+              <h1 class="text-xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-display leading-[0.95] text-burgundy-900">
+                Bienvenue chez Senteur de Mami
               </h1>
               
-              <div class="flex items-center space-x-4">
-                <div class="h-px w-16 bg-gradient-to-r from-burgundy-700 to-gold-600"></div>
-                <p class="text-burgundy-600 italic font-light">{{ slide.subtitle }}</p>
+              <div class="flex items-center space-x-2 md:space-x-4">
+                <div class="h-px w-8 md:w-16 bg-gradient-to-r from-burgundy-700 to-gold-600"></div>
+                <p class="text-xs md:text-sm lg:text-base text-burgundy-600 italic font-light">Senteurs Traditionnelles Authentiques</p>
               </div>
             </div>
 
             <!-- Description -->
-            <p class="text-lg md:text-xl text-burgundy-700 leading-relaxed max-w-xl font-light">
-              {{ slide.description }}
+            <p class="text-xs sm:text-sm md:text-lg lg:text-xl text-burgundy-700 leading-relaxed max-w-xl font-light animate-fade-in-left stagger-1">
+              Découvrez le Gowé, Diguijé et Thiouraye. Des senteurs ancestrales pour parfumer votre maison et vos vêtements.
             </p>
 
             <!-- CTAs -->
-            <div class="flex flex-wrap gap-4 pt-4">
+            <div class="flex flex-col sm:flex-row flex-wrap gap-2 md:gap-4 pt-2 md:pt-4 animate-fade-in-left stagger-2">
               <button 
                 (click)="scrollToProducts()"
-                class="group relative px-10 py-5 bg-burgundy-900 text-white overflow-hidden">
-                <span class="relative z-10 font-medium tracking-wide">Découvrir la Collection</span>
+                class="group relative px-4 py-2 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-burgundy-900 text-white overflow-hidden">
+                <span class="relative z-10 font-medium tracking-wide text-xs md:text-sm lg:text-base">Découvrir la Collection</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-burgundy-800 to-burgundy-950 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500"></div>
               </button>
               
               <button 
                 (click)="openWhatsApp()"
-                class="px-10 py-5 border-2 border-burgundy-900 text-burgundy-900 hover:bg-burgundy-900 hover:text-white transition-all duration-300 font-medium tracking-wide backdrop-blur-sm">
+                class="px-4 py-2 md:px-8 lg:px-10 md:py-4 lg:py-5 border-2 border-burgundy-900 text-burgundy-900 hover:bg-burgundy-900 hover:text-white transition-all duration-300 font-medium tracking-wide backdrop-blur-sm text-xs md:text-sm lg:text-base">
                 Commander sur WhatsApp
               </button>
             </div>
 
             <!-- Stats -->
-            <div class="grid grid-cols-3 gap-8 pt-8 border-t border-burgundy-200">
+            <div class="grid grid-cols-3 gap-2 md:gap-4 lg:gap-8 pt-4 md:pt-8 border-t border-burgundy-200 animate-fade-in-left stagger-3">
               <div>
-                <div class="text-4xl font-display text-burgundy-900 mb-1">500+</div>
-                <div class="text-sm text-burgundy-600 uppercase tracking-wider font-light">Clients Fidèles</div>
+                <div class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-display text-burgundy-900 mb-0.5 md:mb-1">500+</div>
+                <div class="text-[0.5rem] sm:text-xs md:text-sm text-burgundy-600 uppercase tracking-wider font-light">Clients Fidèles</div>
               </div>
               <div>
-                <div class="text-4xl font-display text-burgundy-900 mb-1">100%</div>
-                <div class="text-sm text-burgundy-600 uppercase tracking-wider font-light">Naturel</div>
+                <div class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-display text-burgundy-900 mb-0.5 md:mb-1">100%</div>
+                <div class="text-[0.5rem] sm:text-xs md:text-sm text-burgundy-600 uppercase tracking-wider font-light">Naturel</div>
               </div>
               <div>
-                <div class="text-4xl font-display text-burgundy-900 mb-1">15+</div>
-                <div class="text-sm text-burgundy-600 uppercase tracking-wider font-light">Fragrances</div>
+                <div class="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-display text-burgundy-900 mb-0.5 md:mb-1">15+</div>
+                <div class="text-[0.5rem] sm:text-xs md:text-sm text-burgundy-600 uppercase tracking-wider font-light">Fragrances</div>
               </div>
             </div>
           </div>
 
-          <!-- Right Image: 5 cols -->
-          <div class="lg:col-span-5 relative">
-            <div class="relative aspect-[4/5] bg-gradient-to-br from-burgundy-100 to-cream-200 rounded-sm overflow-hidden shadow-2xl">
-              <img src="/assets/banniere.jpg" alt="Senteur de Mami" class="w-full h-full object-cover">
-              
-              <!-- Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent"></div>
-              
-              <!-- Floating Badge -->
-              <div class="absolute bottom-8 left-8 right-8 bg-white/95 backdrop-blur-md p-6 shadow-xl">
-                <div class="text-sm text-burgundy-600 uppercase tracking-widest mb-2 font-medium">Édition Limitée</div>
-                <div class="text-xl font-display text-burgundy-900">Fragrances Authentiques</div>
+          <!-- Right Image - 3D Effect Repositionné -->
+          <div class="relative perspective-3d animate-fade-in-right">
+            <!-- 3D Container -->
+            <div class="banner-3d-container relative group">
+              <!-- Main 3D Card -->
+              <div class="banner-3d-card relative w-full aspect-square max-w-[600px] mx-auto bg-transparent rounded-lg md:rounded-2xl lg:rounded-3xl overflow-visible transform-gpu transition-all duration-700 ease-out">
+                <!-- Image sans arrière-plan - Centrée et Grande -->
+                <img 
+                  src="/assets/banniere.jpg" 
+                  alt="Senteur de Mami" 
+                  class="w-full h-full object-contain object-center transform-gpu transition-all duration-700 group-hover:scale-110 drop-shadow-2xl"
+                  style="filter: drop-shadow(0 25px 50px rgba(0,0,0,0.3)) drop-shadow(0 10px 25px rgba(113, 47, 38, 0.4)) drop-shadow(0 0 20px rgba(218, 165, 32, 0.2));">
+                
+                <!-- Glow effect derrière l'image - Très subtil -->
+                <div class="absolute inset-0 -z-10 bg-gradient-to-br from-gold-400/10 via-burgundy-500/5 to-burgundy-900/10 blur-3xl animate-pulse-slow"></div>
+                
+                <!-- Light Reflection Effect au survol -->
+                <div class="absolute inset-0 bg-gradient-to-br from-white/20 via-gold-200/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none mix-blend-overlay"></div>
               </div>
+              
+              <!-- 3D Depth Layers - Très subtiles -->
+              <div class="absolute inset-0 -z-10 bg-gradient-to-br from-burgundy-600/5 to-gold-600/5 rounded-lg md:rounded-2xl lg:rounded-3xl transform translate-x-3 translate-y-3 md:translate-x-6 md:translate-y-6 blur-xl transition-all duration-700 group-hover:translate-x-4 group-hover:translate-y-4 md:group-hover:translate-x-8 md:group-hover:translate-y-8 opacity-20"></div>
+              <div class="absolute inset-0 -z-20 bg-gradient-to-br from-burgundy-700/3 to-gold-700/3 rounded-lg md:rounded-2xl lg:rounded-3xl transform translate-x-6 translate-y-6 md:translate-x-12 md:translate-y-12 blur-2xl transition-all duration-700 group-hover:translate-x-7 group-hover:translate-y-7 md:group-hover:translate-x-14 md:group-hover:translate-y-14 opacity-15"></div>
             </div>
-
-            <!-- Decorative Elements -->
-            <div class="absolute -top-6 -right-6 w-32 h-32 bg-gold-200 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float"></div>
-            <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-burgundy-200 rounded-full mix-blend-multiply filter blur-2xl opacity-60 animate-float" style="animation-delay: 1.5s;"></div>
           </div>
         </div>
-      }
-    }
-  </div>
-
-  <!-- Navigation Arrows -->
-  <button 
-    (click)="prevSlide()"
-    class="absolute left-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/80 backdrop-blur-sm hover:bg-white border border-burgundy-100 shadow-lg hover:shadow-xl transition-all duration-300 group hidden lg:flex items-center justify-center">
-    <svg class="w-6 h-6 text-burgundy-900 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-    </svg>
-  </button>
-  
-  <button 
-    (click)="nextSlide()"
-    class="absolute right-8 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/80 backdrop-blur-sm hover:bg-white border border-burgundy-100 shadow-lg hover:shadow-xl transition-all duration-300 group hidden lg:flex items-center justify-center">
-    <svg class="w-6 h-6 text-burgundy-900 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-    </svg>
-  </button>
-
-  <!-- Elegant Dots -->
-  <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-3">
-    @for (slide of slides; track $index) {
-      <button 
-        (click)="goToSlide($index)"
-        class="group relative"
-        [class.w-12]="currentSlide() === $index"
-        [class.w-3]="currentSlide() !== $index">
-        <div 
-          class="h-1 transition-all duration-500 rounded-full"
-          [class.bg-burgundy-900]="currentSlide() === $index"
-          [class.bg-burgundy-300]="currentSlide() !== $index">
-        </div>
-        @if (currentSlide() === $index) {
-          <div class="absolute inset-0 bg-burgundy-900 rounded-full blur-md opacity-30"></div>
-        }
-      </button>
-    }
   </div>
 </section>
