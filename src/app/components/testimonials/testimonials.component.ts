@@ -30,7 +30,7 @@ export class TestimonialsComponent {
       id: 2,
       name: 'Mamadou Sow',
       rating: 5,
-      comment: 'Excellent service et produits de très haute qualité. Les parfums sont authentiques et naturels. J\'adore la collection !',
+      comment: 'Excellent service et produits de très haute qualité. Les parfums sont authentiques et naturels. J\'adore la collection Gowé !',
       date: 'Il y a 1 mois',
       avatar: '👨🏿'
     },
@@ -45,8 +45,8 @@ export class TestimonialsComponent {
     {
       id: 4,
       name: 'Ousmane Ba',
-      rating: 4,
-      comment: 'Très bon rapport qualité-prix. Les parfums sont naturels et sentent vraiment bon. Livraison rapide via WhatsApp.',
+      rating: 5,
+      comment: 'Le Diguijé Intense est tout simplement incroyable ! Très bon rapport qualité-prix. Les parfums sont naturels et sentent vraiment bon. Livraison rapide via WhatsApp.',
       date: 'Il y a 1 semaine',
       avatar: '👨🏾'
     },
@@ -54,7 +54,7 @@ export class TestimonialsComponent {
       id: 5,
       name: 'Marième Fall',
       rating: 5,
-      comment: 'Je suis ravie de ma commande ! Le parfum Essence d\'Afrique est magnifique. Merci Senteur de Mami pour ces créations uniques.',
+      comment: 'Je suis ravie de ma commande ! Le parfum Essence d\'Afrique est magnifique. Merci Senteur de Mami pour ces créations uniques qui me rappellent mes origines.',
       date: 'Il y a 4 jours',
       avatar: '👩🏾'
     },
@@ -65,6 +65,30 @@ export class TestimonialsComponent {
       comment: 'Produits authentiques et service client au top. La commande via WhatsApp est très pratique. Je recommande à 100% !',
       date: 'Il y a 2 jours',
       avatar: '👨🏿'
+    },
+    {
+      id: 7,
+      name: 'Khady Sarr',
+      rating: 5,
+      comment: 'Le Thiouraye Royal est mon parfum préféré ! Les fragrances Senteur de Mami sont tout simplement magnifiques. J\'ai reçu tellement de compliments.',
+      date: 'Il y a 1 semaine',
+      avatar: '👩🏿'
+    },
+    {
+      id: 8,
+      name: 'Cheikh Gueye',
+      rating: 5,
+      comment: 'Bonne qualité et prix abordables. Le parfum Savane Mystique est devenu mon préféré pour les occasions spéciales.',
+      date: 'Il y a 3 jours',
+      avatar: '👨🏾'
+    },
+    {
+      id: 9,
+      name: 'Aminata Diop',
+      rating: 5,
+      comment: 'Service impeccable et parfums de luxe à prix accessibles. Je suis très satisfaite de mon achat du coffret découverte.',
+      date: 'Il y a 5 jours',
+      avatar: '👩🏾'
     }
   ]);
 
